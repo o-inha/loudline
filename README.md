@@ -7,11 +7,11 @@ Loudline is a Windows app for basic loudness control of an entire music release.
 
 It is a portable, single .exe file, and you can download it from here:
 
-[![Button Icon]][Link] 
+[![Btn Download]][Link Download] [![Btn Support]][Link Support]
 
 ---
 
-Some of its features:
+### Some of Loudline's features:
 - Is not an audio editor beyond loudness control.
 - Everything is immediately processed: you see/hear exactly what you will export at all times.
   - Move playhead to control which audio file (song) is processed first/next, when all tracks are being processed. 
@@ -238,5 +238,7 @@ Loudline is available under the [MIT License](LICENSE), copyright © 2026 O. Inh
 
 Third-party components keep their own licence terms. Preserve [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) and the packaged `licenses` directory when redistributing the executable. See those notices for Lucide icons, NAudio, the WDL resampler, and the included .NET runtimes.
 
-[Button Icon]: https://img.shields.io/badge/Download_(ZIP)-37a779?style=for-the-badge
-[Link]: https://github.com/o-inha/loudline/releases/download/v1.0.0/Loudline-win-x64.zip
+[Btn Download]: https://img.shields.io/badge/⬇️_Download_(ZIP,_~66MB)-177a5d?style=for-the-badge
+[Link Download]: https://github.com/o-inha/loudline/releases/download/v1.0.0/Loudline-win-x64.zip
+[Btn Support]: https://img.shields.io/badge/☕️_Buy_Me_a_Coffee-325b70?style=for-the-badge
+[Link Support]: https://buymeacoffee.com/inha
