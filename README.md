@@ -5,7 +5,7 @@
 
 Loudline is a free and open-source Windows app for basic loudness control of an entire music release. It exists mainly for convenient user interface for this purpose. The audio processing itself contains nothing miraculous or innovate.
 
-It is a portable, single .exe file, and you can download it from here:
+It is a portable (no installation), single .exe file, and you can download it from here:
 
 [![Btn Download]][Link Download] [![Btn Support]][Link Support]
 
