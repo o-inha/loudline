@@ -28,6 +28,7 @@ It is a portable, single .exe file, and you can download it from here:
   - Manual controls per audio file (song) to overwrite global LUFS target.
 - Peak protection.
   - Toggle on/off. 
+  - Multi-technique adaptive peak control.
   - Level-match with original audio level to hear the difference.
   - Delta to hear what is removed.
   - Has a number of settings.
