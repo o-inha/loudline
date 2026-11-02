@@ -1,7 +1,7 @@
 # Loudline
 
 > [!IMPORTANT]  
-> This is a 100% vibe-coded adhoc app prompted in the course of a of couple days. No human has written or reviewed a single line of code. No human has probably even read this README.
+> This is a 100% vibe-coded adhoc app prompted over the course of a of couple days. No human has written or reviewed a single line of code. No human has probably even read this README.
 
 Loudline is a Windows app for basic loudness control of an entire music release. It exists mainly for convenient user interface for this purpose; the audio processing itself contains nothing miraculous or innovate.
 
