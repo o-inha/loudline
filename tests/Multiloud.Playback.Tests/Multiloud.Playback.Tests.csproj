@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Multiloud.Core/Multiloud.Core.csproj" />
+    <PackageReference Include="NAudio.Core" Version="2.2.1" />
+    <PackageReference Include="NAudio.Wasapi" Version="2.2.1" />
+    <Compile Include="../../src/Multiloud.App/Services/PlaybackService.cs" Link="PlaybackService.cs" />
+    <Compile Include="../../src/Multiloud.App/Services/PlaybackSequence.cs" Link="PlaybackSequence.cs" />
+    <Compile Include="../../src/Multiloud.App/Services/LoopPlaybackPlan.cs" Link="LoopPlaybackPlan.cs" />
+    <Compile Include="../../src/Multiloud.App/Services/LoopTrackReader.cs" Link="LoopTrackReader.cs" />
+    <Compile Include="../../src/Multiloud.App/Services/PeakDeltaSource.cs" Link="PeakDeltaSource.cs" />
+    <Compile Include="../../src/Multiloud.App/Services/PlaybackTransport.cs" Link="PlaybackTransport.cs" />
+    <Compile Include="../../src/Multiloud.App/Services/NativeWheelInput.cs" Link="NativeWheelInput.cs" />
+    <Compile Include="../../src/Multiloud.App/Services/PreviewCache.cs" Link="PreviewCache.cs" />
+    <Compile Include="../../src/Multiloud.App/Services/PreviewHistoryReference.cs" Link="PreviewHistoryReference.cs" />
+    <Compile Include="../../src/Multiloud.App/Services/TrackOrdering.cs" Link="TrackOrdering.cs" />
+    <Compile Include="../../src/Multiloud.App/Services/ProjectFileService.cs" Link="ProjectFileService.cs" />
+  </ItemGroup>
+</Project>

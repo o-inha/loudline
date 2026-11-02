@@ -1,0 +1,105 @@
+name: Build Loudline Windows app
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    name: Verify and package Loudline Windows 11 x64
+    runs-on: windows-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Verify DSP and playback, then publish single executable
+        shell: pwsh
+        run: ./build.ps1
+      - name: Launch published desktop app and capture UI
+        shell: pwsh
+        run: |
+          $screenshot = Join-Path $env:RUNNER_TEMP "Loudline.png"
+          $exe = Join-Path $PWD "artifacts/Loudline-win-x64/Loudline.exe"
+          if (-not (Test-Path $exe)) { throw "Published executable not found: $exe" }
+          $process = Start-Process -FilePath $exe -ArgumentList @("--smoke-test", "--screenshot", "`"$screenshot`"") -PassThru
+          if (-not $process.WaitForExit(360000)) {
+            $process.Kill()
+            throw "Desktop startup smoke test timed out."
+          }
+          if ($process.ExitCode -ne 0) {
+            $errorLog = Join-Path $env:LOCALAPPDATA "Loudline/last-error.txt"
+            if (Test-Path $errorLog) { Get-Content $errorLog | Write-Output }
+            throw "Desktop startup smoke test failed: $($process.ExitCode)"
+          }
+          if (-not (Test-Path $screenshot)) { throw "Desktop smoke screenshot was not produced." }
+      - name: Measure time to first rendered window
+        shell: pwsh
+        run: |
+          $folder = Join-Path $env:RUNNER_TEMP "Loudline-startup-folder"
+          dotnet publish src/Multiloud.App/Multiloud.App.csproj --configuration Release --runtime win-x64 --self-contained true --output $folder -p:PublishSingleFile=false -p:DebugType=None -p:DebugSymbols=false
+          if ($LASTEXITCODE -ne 0) { throw "Startup comparison publish failed." }
+          ./tools/measure-startup.ps1 -SingleExePath (Join-Path $PWD "artifacts/Loudline-win-x64/Loudline.exe") -FolderExePath (Join-Path $folder "Loudline.exe") -OutputPath (Join-Path $env:RUNNER_TEMP "Loudline-startup-performance.json")
+      - name: Upload portable Windows app
+        uses: actions/upload-artifact@v4
+        with:
+          name: Loudline-win-x64
+          path: artifacts/Loudline-win-x64.zip
+          if-no-files-found: error
+          retention-days: 30
+      - name: Upload desktop verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Loudline-desktop-verification
+          path: |
+            ${{ runner.temp }}/Loudline*.png
+            ${{ runner.temp }}/Loudline-render-performance.json
+            ${{ runner.temp }}/Loudline-startup-performance.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Publish release
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && github.repository == 'o-inha/loudline'
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [xml]$project = Get-Content "src/Multiloud.App/Multiloud.App.csproj"
+          $version = [string]$project.Project.PropertyGroup.Version
+          $tag = "v$version"
+          gh release view $tag *> $null
+          if ($LASTEXITCODE -eq 0) {
+            Write-Output "Release $tag already exists; preserving its original assets and target."
+            exit 0
+          }
+          $notes = @"
+          Loudline $version — first release.
+
+          Windows 11 x64 app for matching music loudness across an album, with a continuous editable volume envelope, per-track LUFS matching, peak protection, and an optional background layer at a fixed level.
+
+          Download **Loudline-win-x64.zip**, extract it, and run **Loudline.exe**. The app is a single self-contained executable: no installer, .NET installation, or accompanying DLL folders are required. Documentation and licence notices are included in the ZIP.
+
+          Includes slicing and merging, silence insertion, custom export boundaries, dual audition loops, project saving and source relinking, a fast waveform timeline, and a real loading window before editor initialization. The Explorer icon has a white outline for visibility on both light and dark backgrounds. Undo restores existing compatible previews immediately when their buffers remain available.
+
+          Originally designed & vibe-coded by O. Inha / https://inha.jp
+
+          Source code is available under the MIT License. You may fork, modify, and redistribute it, including commercially, while retaining the applicable copyright and licence notices. Third-party components retain their own terms.
+
+          This executable is unsigned. Source commit: ${{ github.sha }}.
+          "@
+          $notesPath = Join-Path $env:RUNNER_TEMP "loudline-release-notes.md"
+          Set-Content -Path $notesPath -Value $notes -Encoding utf8
+          gh release create $tag artifacts/Loudline-win-x64.zip --target "${{ github.sha }}" --title "Loudline $version" --notes-file $notesPath --latest
+          if ($LASTEXITCODE -ne 0) { throw "Release creation failed." }

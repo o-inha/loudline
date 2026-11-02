@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiloud.Core", "src\Multiloud.Core\Multiloud.Core.csproj", "{8DFE77B1-C989-4D50-AC53-722276D90CBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiloud", "src\Multiloud.App\Multiloud.App.csproj", "{647369AB-A36E-4B1B-8117-A6FC36DDF0C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiloud.Tests", "tests\Multiloud.Tests\Multiloud.Tests.csproj", "{7F886047-C090-4368-9BB4-5305B67F28FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiloud.Playback.Tests", "tests\Multiloud.Playback.Tests\Multiloud.Playback.Tests.csproj", "{AD882720-4CCD-4E28-943A-2D7AC5BF42D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DFE77B1-C989-4D50-AC53-722276D90CBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DFE77B1-C989-4D50-AC53-722276D90CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DFE77B1-C989-4D50-AC53-722276D90CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DFE77B1-C989-4D50-AC53-722276D90CBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{647369AB-A36E-4B1B-8117-A6FC36DDF0C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647369AB-A36E-4B1B-8117-A6FC36DDF0C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647369AB-A36E-4B1B-8117-A6FC36DDF0C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647369AB-A36E-4B1B-8117-A6FC36DDF0C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F886047-C090-4368-9BB4-5305B67F28FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F886047-C090-4368-9BB4-5305B67F28FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F886047-C090-4368-9BB4-5305B67F28FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F886047-C090-4368-9BB4-5305B67F28FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD882720-4CCD-4E28-943A-2D7AC5BF42D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD882720-4CCD-4E28-943A-2D7AC5BF42D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD882720-4CCD-4E28-943A-2D7AC5BF42D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD882720-4CCD-4E28-943A-2D7AC5BF42D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+.vs/
+*.user
+artifacts/
+*.wav
+*.mp3
+*.flac
+*.multiloud
+
+*_wpftmp.csproj

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Loudline</AssemblyName>
+    <Product>Loudline</Product>
+    <Title>Loudline</Title>
+    <Description>Music release loudness matching and section leveling</Description>
+    <RootNamespace>Multiloud.App</RootNamespace>
+    <Version>1.0.0</Version>
+    <ApplicationIcon>Assets/ExplorerIcon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Assets/AppIcon.ico" />
+    <Resource Include="Assets/AppIconDark.ico" />
+    <Resource Include="Assets/ExplorerIcon.ico" />
+    <Resource Include="Assets/LoudlineLogo.png" />
+    <ProjectReference Include="../Multiloud.Core/Multiloud.Core.csproj" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+</Project>
