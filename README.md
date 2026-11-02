@@ -1,15 +1,51 @@
 # Loudline
 
-> [!NOTE]  
-> This app is 100% vibe-coded. I did not write or review a single line of code. Tbh, I haven't even read this README.
+> [!IMPORTANT]  
+> This is a 100% vibe-coded adhoc app prompted in the course of a of couple days. No human has written or reviewed a single line of code. No human has probably even read this README.
 
-Loudline is a Windows app for loudness control of an entire music release.
+Loudline is a portable Windows app for basic loudness control of an entire music release. It exists mainly for convenient user interface for this purpose; the audio processing itself contains nothing miraculous or innovate.
 
 [![Button Icon]][Link] 
 
-<img width="2877" height="1797" alt="image" src="https://github.com/user-attachments/assets/9bb64346-61d3-49af-9cde-60a991969d44" />
-
 ---
+
+Some of its features:
+- Is not an audio editor beyond loudness control.
+- Everything is immediately processed: you see exactly what you will export at all times.
+- Display all audio files (tracks) horizontally stacked, as if a single waveform.
+- Dynamic leveling, as in one big volume envelope.
+  - Toggle on/off.
+  - App automatically suggests a volume envelope
+  - ...which can be freely edited
+  - ...and adjusted by "Strength" slider
+  - ...and a few other settings.
+- Track level matching to -N LUFS.
+  - Toggle on/off.
+  - Manual controls per track to overwrite global LUFS target.
+- Peak protection.
+  - Toggle on/off. 
+  - Level-match with original audio to hear the difference.
+  - Delta to hear what is removed.
+  - Has a number of settings.
+  - Also works as a "volume maximizer".
+- Toggle waveform view between Original, Result, or Comparison.
+- Include a secondary (background) audio track. 
+  - Has fixed volume across all tracks.
+  - Is not processed in any way.
+  - Its volume is still accounted for in all the tracks and their processing.
+- Slice or merge files.
+- Insert silence.
+- Seamless single segment (A) or dual segment (A/B) looping.
+- Lightweight and smooth waveform zooming and scrolling.
+- Custom track boundaries.
+  - As if we merge all tracks into one audio file, and re-slice it by these bounadry markers on export.
+  - All processing still happens according to original track boundaries (which we can slice/merge).
+- My personal favourite: dropdown for selecting output device right there on the main UI, without need to dive into app settings.
+  
+---
+
+> [!NOTE]  
+> From this point onward, it's the AI agent's original README. You can be the first person to read it through.
 
 A native **Windows 11 x64** desktop app for balancing the loudness of music across a release. Drop in tracks, review the suggested changes on one continuous timeline, listen, fine-tune, and export separate processed WAV files.
 
@@ -197,5 +233,5 @@ Loudline is available under the [MIT License](LICENSE), copyright © 2026 O. Inh
 
 Third-party components keep their own licence terms. Preserve [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) and the packaged `licenses` directory when redistributing the executable. See those notices for Lucide icons, NAudio, the WDL resampler, and the included .NET runtimes.
 
-[Button Icon]: https://img.shields.io/badge/Installation-EF2D5E?style=for-the-badge&logoColor=white&logo=Files
+[Button Icon]: https://img.shields.io/badge/Download_(ZIP)-37a779?style=for-the-badge
 [Link]: # 'https://github.com/o-inha/loudline/releases/download/v1.0.0/Loudline-win-x64.zip'
