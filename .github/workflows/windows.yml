@@ -3,7 +3,11 @@ name: Build Loudline Windows app
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'README.md'
   pull_request:
+    paths-ignore:
+      - 'README.md'
   workflow_dispatch:
 
 permissions:
