@@ -53,7 +53,7 @@ https://github.com/user-attachments/assets/8b182e51-16ab-4af9-953f-27f6be031f9c
 ---
 
 > [!NOTE]  
-> You can be the first person to read it through the AI agent's original README.
+> You can be the first person to read through the AI agent's original README.
 
 <details>
 
