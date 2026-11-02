@@ -14,6 +14,7 @@ Some of its features:
 - Everything is immediately processed: you see/hear exactly what you will export at all times.
   - Move playhead to control which audio file (song) is processed first/next, when all tracks are being processed. 
 - Display all audio files (song) horizontally stacked, as if a single waveform.
+  - Re-order them freely by dragging around.
 - Dynamic leveling, as in one big volume envelope.
   - Toggle on/off.
   - App automatically suggests a gentle volume envelope to smooth out loudness variation
