@@ -11,8 +11,9 @@ Loudline is a portable Windows app for basic loudness control of an entire music
 
 Some of its features:
 - Is not an audio editor beyond loudness control.
-- Everything is immediately processed: you see exactly what you will export at all times.
-- Display all audio files (tracks) horizontally stacked, as if a single waveform.
+- Everything is immediately processed: you see/hear exactly what you will export at all times.
+  - Move playhead to control which audio file (song) is processed first/next, when all tracks are being processed. 
+- Display all audio files (song) horizontally stacked, as if a single waveform.
 - Dynamic leveling, as in one big volume envelope.
   - Toggle on/off.
   - App automatically suggests a gentle volume envelope to smooth out loudness variation
@@ -21,25 +22,26 @@ Some of its features:
   - ...and a few other settings.
 - Track level matching to -N LUFS.
   - Toggle on/off.
-  - Manual controls per track to overwrite global LUFS target.
+  - Manual controls per audio file (song) to overwrite global LUFS target.
 - Peak protection.
   - Toggle on/off. 
-  - Level-match with original audio to hear the difference.
+  - Level-match with original audio level to hear the difference.
   - Delta to hear what is removed.
   - Has a number of settings.
   - Also works as a "volume maximizer".
 - Toggle waveform view between Original, Result, or Comparison.
 - Include a secondary (background) audio track. 
-  - Has fixed volume across all tracks.
+  - Has fixed volume across all audio files (songs) in the main track.
   - Is not processed in any way.
-  - Its volume is still accounted for in all the tracks and their processing.
-- Slice or merge files.
+  - Its volume is still accounted for in all the audio files (songs) and their processing.
+- Slice or merge audio files (songs).
+  - Each audio slice is treated as their own audio file (song) and everything is processed accordingly. 
 - Insert silence.
 - Seamless single segment (A) or dual segment (A/B) looping.
 - Lightweight and smooth waveform zooming and scrolling.
-- Custom track boundaries.
-  - As if we merge all tracks into one audio file, and re-slice it by these bounadry markers on export.
-  - All processing still happens according to original track boundaries (which we can slice/merge).
+- Custom track (song) boundaries.
+  - As if we concatenate all tracks (songs) into one long audio file, and then re-slice it by these custom bounadry markers when we export.
+  - All processing still happens according to original audio file (song) boundaries (which we can also slice/merge).
 - My personal favourite: dropdown for selecting output device right there on the main UI, without need to dive into app settings.
   
 ---
