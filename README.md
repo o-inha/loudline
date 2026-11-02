@@ -17,7 +17,7 @@ https://github.com/user-attachments/assets/8b182e51-16ab-4af9-953f-27f6be031f9c
 - Is not an audio editor beyond loudness control.
 - Everything is immediately processed: you see/hear exactly what you will export at all times.
   - Move playhead to control which audio file (song) is processed first/next, when all tracks are being processed. 
-- Display all audio files (song) horizontally stacked, as if a single waveform.
+- Display all audio files (songs) horizontally stacked, as if a single waveform.
   - Re-order them freely by dragging around.
 - Dynamic leveling, as in one big volume envelope.
   - Toggle on/off.
@@ -53,8 +53,29 @@ https://github.com/user-attachments/assets/8b182e51-16ab-4af9-953f-27f6be031f9c
 ---
 
 > [!NOTE]  
-> From this point onward, it's the AI agent's original README. You can be the first person to read it through.
+> You can be the first person to read it through the AI agent's original README.
 
+<details>
+
+  <summary>Open the original README</summary>
+
+  ---
+  
+1. [Music and optional background](#music-and-optional-background)
+2. [Editing and audition loops](#editing-and-audition-loops)
+3. [Custom track boundaries and export](#custom-track-boundaries-and-export)
+4. [Run](#run)
+5. [Workflow](#workflow)
+6. [Per track controls](#per-track-controls)
+7. [Audio output](#audio-output)
+8. [Timeline controls](#timeline-controls)
+9. [Projects](#projects)
+10. [Processing details and limits](#processing-details-and-limits)
+11. [Build and verify](#build-and-verify)
+12. [Licence](#licence)
+
+
+  
 A native **Windows 11 x64** desktop app for balancing the loudness of music across a release. Drop in tracks, review the suggested changes on one continuous timeline, listen, fine-tune, and export separate processed WAV files.
 
 ## Music and optional background
@@ -240,6 +261,8 @@ Architecture: `Multiloud.Core` contains platform-independent analysis/DSP; `Mult
 Loudline is available under the [MIT License](LICENSE), copyright © 2026 O. Inha. Anyone may use, fork, modify and redistribute it, including commercially, provided that the copyright and licence notice are retained. The software is supplied without warranty.
 
 Third-party components keep their own licence terms. Preserve [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) and the packaged `licenses` directory when redistributing the executable. See those notices for Lucide icons, NAudio, the WDL resampler, and the included .NET runtimes.
+
+</details>
 
 [Btn Download]: https://img.shields.io/badge/⤓_Download_(ZIP,_~66MB)-177a5d?style=for-the-badge
 [Link Download]: https://github.com/o-inha/loudline/releases/download/v1.0.0/Loudline-win-x64.zip
