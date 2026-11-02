@@ -29,7 +29,7 @@ Some of its features:
   - Level-match with original audio level to hear the difference.
   - Delta to hear what is removed.
   - Has a number of settings.
-  - Also works as a "volume maximizer".
+  - Also works as a "volume maximizer" (haven't tried, but in theory, anyway).
 - Toggle waveform view between Original, Result, or Comparison.
 - Include a secondary (background) audio track. 
   - Has fixed volume across all audio files (songs) in the main track.
