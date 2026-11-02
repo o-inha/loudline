@@ -238,7 +238,7 @@ Loudline is available under the [MIT License](LICENSE), copyright © 2026 O. Inh
 
 Third-party components keep their own licence terms. Preserve [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) and the packaged `licenses` directory when redistributing the executable. See those notices for Lucide icons, NAudio, the WDL resampler, and the included .NET runtimes.
 
-[Btn Download]: https://img.shields.io/badge/⬇️_Download_(ZIP,_~66MB)-177a5d?style=for-the-badge
+[Btn Download]: https://img.shields.io/badge/⤓_Download_(ZIP,_~66MB)-177a5d?style=for-the-badge
 [Link Download]: https://github.com/o-inha/loudline/releases/download/v1.0.0/Loudline-win-x64.zip
 [Btn Support]: https://img.shields.io/badge/☕️_Buy_Me_a_Coffee-325b70?style=for-the-badge
 [Link Support]: https://buymeacoffee.com/inha
