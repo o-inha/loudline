@@ -1,10 +1,17 @@
 # Loudline
 
+> [!NOTE]  
+> This app is 100% vibe-coded. I did not write or review a single line of code. Tbh, I haven't even read this README.
+
+Loudline is a Windows app for loudness control of an entire music release.
+
+[![Button Icon]][Link] 
+
+<img width="2877" height="1797" alt="image" src="https://github.com/user-attachments/assets/9bb64346-61d3-49af-9cde-60a991969d44" />
+
+---
+
 A native **Windows 11 x64** desktop app for balancing the loudness of music across a release. Drop in tracks, review the suggested changes on one continuous timeline, listen, fine-tune, and export separate processed WAV files.
-
-**Version 1.0.0** · [Download](https://github.com/o-inha/loudline/releases) · [MIT License](LICENSE)
-
-Originally designed & vibe-coded by O. Inha / https://inha.jp
 
 ## Music and optional background
 
@@ -189,3 +196,6 @@ Architecture: `Multiloud.Core` contains platform-independent analysis/DSP; `Mult
 Loudline is available under the [MIT License](LICENSE), copyright © 2026 O. Inha. Anyone may use, fork, modify and redistribute it, including commercially, provided that the copyright and licence notice are retained. The software is supplied without warranty.
 
 Third-party components keep their own licence terms. Preserve [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) and the packaged `licenses` directory when redistributing the executable. See those notices for Lucide icons, NAudio, the WDL resampler, and the included .NET runtimes.
+
+[Button Icon]: https://img.shields.io/badge/Installation-EF2D5E?style=for-the-badge&logoColor=white&logo=Files
+[Link]: # 'https://github.com/o-inha/loudline/releases/download/v1.0.0/Loudline-win-x64.zip'
