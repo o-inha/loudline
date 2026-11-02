@@ -15,9 +15,9 @@ Some of its features:
 - Display all audio files (tracks) horizontally stacked, as if a single waveform.
 - Dynamic leveling, as in one big volume envelope.
   - Toggle on/off.
-  - App automatically suggests a volume envelope
+  - App automatically suggests a gentle volume envelope to smooth out loudness variation
   - ...which can be freely edited
-  - ...and adjusted by "Strength" slider
+  - ...and adjusted by the "Strength" slider
   - ...and a few other settings.
 - Track level matching to -N LUFS.
   - Toggle on/off.
