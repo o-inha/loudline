@@ -11,6 +11,8 @@ It is a portable (no installation), single .exe file, and you can download it fr
 
 https://github.com/user-attachments/assets/8b182e51-16ab-4af9-953f-27f6be031f9c
 
+_These clips are partly sped up. It will probably not process your audio this fast in real-life._
+
 ---
 
 ### Some of Loudline's features:
