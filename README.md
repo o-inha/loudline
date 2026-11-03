@@ -38,7 +38,7 @@ https://github.com/user-attachments/assets/8b182e51-16ab-4af9-953f-27f6be031f9c
 - Include a secondary (background) audio track. 
   - Has fixed volume across all "main track" audio files; "main track" volume changes per track, this one stays static.
   - Is not processed in any way beyond single volume control (+/- N dB).
-  - Its volume is still included accounted for in all the audio files and their processing in the "main track".
+  - Its volume is still includedand  accounted for in all the audio files and their processing in the "main track".
   - Its designated purpose: you can have vastly loudness-processed songs, while the background noise stays at static volume across the release.
 - Slice or merge audio files.
   - Each audio slice is treated as their own "audio file", and everything is analyzed and processed accordingly.
