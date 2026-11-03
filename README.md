@@ -14,21 +14,20 @@ https://github.com/user-attachments/assets/8b182e51-16ab-4af9-953f-27f6be031f9c
 ---
 
 ### Some of Loudline's features:
-- Is not an audio editor beyond loudness control.
 - Everything is immediately processed: you see/hear exactly what you will export at all times.
-  - Move playhead to control which audio file (song) is processed first/next, when all tracks are being processed. 
-- Display all audio files (songs) horizontally stacked, as if a single waveform.
+  - Move playhead to control which audio file is processed first/next, when all/multiple tracks are being processed.
+- Display all audio files horizontally stacked, as if a single waveform.
   - Re-order them freely by dragging around.
-- Dynamic leveling, as in one big volume envelope.
+- DYNAMIC LEVELING, as in one big volume envelope.
   - Toggle on/off.
   - App automatically suggests a gentle volume envelope to smooth out loudness variation
   - ...which can be freely edited
   - ...and adjusted by the "Strength" slider
   - ...and a few other settings.
-- Track level matching to -N LUFS.
+- TRACK (song) LEVEL MATCHING to -N LUFS.
   - Toggle on/off.
-  - Manual controls per audio file (song) to overwrite global LUFS target.
-- Peak protection.
+  - Manual controls per audio file to overwrite global LUFS target.
+- PEAK PROTECTION.
   - Toggle on/off. 
   - Multi-technique adaptive peak control.
   - Level-match with original audio level to hear the difference.
@@ -37,17 +36,21 @@ https://github.com/user-attachments/assets/8b182e51-16ab-4af9-953f-27f6be031f9c
   - Also works as a "volume maximizer" (haven't tried, but in theory, anyway).
 - Toggle waveform view between Original, Result, or Comparison.
 - Include a secondary (background) audio track. 
-  - Has fixed volume across all audio files (songs) in the main track.
-  - Is not processed in any way.
-  - Its volume is still accounted for in all the audio files (songs) and their processing.
-- Slice or merge audio files (songs).
-  - Each audio slice is treated as their own audio file (song) and everything is processed accordingly. 
+  - Has fixed volume across all "main track" audio files; "main track" volume changes per track, this one stays static.
+  - Is not processed in any way beyond single volume control (+/- N dB).
+  - Its volume is still included accounted for in all the audio files and their processing in the "main track".
+  - Its designated purpose: you can have vastly loudness-processed songs, while the background noise stays at static volume across the release.
+- Slice or merge audio files.
+  - Each audio slice is treated as their own "audio file", and everything is analyzed and processed accordingly.
+  - Want target LUFS to change in the middle of a track: Just slice it.
+  - Want two tracks processed together to single LUFS target: just merge it.
 - Insert silence.
+  - at start, at end, between specific audio files, between all audio files. 
 - Seamless single segment (A or B) or dual segment (A & B) looping.
 - Lightweight and smooth waveform zooming and scrolling.
 - Custom track (song) boundaries.
-  - As if we concatenate all tracks (songs) into one long audio file, and then re-slice it by these custom bounadry markers when we export.
-  - All processing still happens according to original audio file (song) boundaries (which we can also slice/merge).
+  - As if we concatenate all songs into one long audio file, and then re-slice it by these custom bounadry markers when we export.
+  - All processing still happens according to actual audio file boundaries.
 - My personal favourite: dropdown for selecting output device right there on the main UI, without need to dive into app settings.
   
 ---
