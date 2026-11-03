@@ -269,7 +269,7 @@ Third-party components keep their own licence terms. Preserve [THIRD-PARTY-NOTIC
 
 </details>
 
-[Btn Download]: https://img.shields.io/badge/⤓_Download_(ZIP,_~66MB)-177a5d?style=for-the-badge
+[Btn Download]: https://img.shields.io/badge/⤓_Download_(ZIP,_~66MB)-245E53?style=for-the-badge
 [Link Download]: https://github.com/o-inha/loudline/releases/download/v1.0.0/Loudline-win-x64.zip
-[Btn Support]: https://img.shields.io/badge/☕️_Insist_on_offering_me_a_coffee-325b70?style=for-the-badge
+[Btn Support]: https://img.shields.io/badge/☕️_Insist_on_offering_me_a_coffee-323C4C?style=for-the-badge
 [Link Support]: https://buymeacoffee.com/inha
