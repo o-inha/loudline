@@ -43,7 +43,7 @@ https://github.com/user-attachments/assets/8b182e51-16ab-4af9-953f-27f6be031f9c
 - Slice or merge audio files.
   - Each audio slice is treated as their own "audio file", and everything is analyzed and processed accordingly.
   - Want different parts of a song to be separately analyzed and processed to target LUFS: just slice it.
-  - Want two tracks processed together to target LUFS: just merge it.
+  - Want two audio files processed together to target LUFS: just merge it.
 - Insert silence.
   - at start, at end, between specific audio files, between all audio files. 
 - Seamless single segment (A or B) or dual segment (A & B) looping.
