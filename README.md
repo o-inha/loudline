@@ -43,7 +43,7 @@ https://github.com/user-attachments/assets/8b182e51-16ab-4af9-953f-27f6be031f9c
 - Slice or merge audio files (songs).
   - Each audio slice is treated as their own audio file (song) and everything is processed accordingly. 
 - Insert silence.
-- Seamless single segment (A) or dual segment (A/B) looping.
+- Seamless single segment (A or B) or dual segment (A & B) looping.
 - Lightweight and smooth waveform zooming and scrolling.
 - Custom track (song) boundaries.
   - As if we concatenate all tracks (songs) into one long audio file, and then re-slice it by these custom bounadry markers when we export.
