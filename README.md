@@ -3,7 +3,7 @@
 > [!IMPORTANT]  
 > This is a 100% vibe-coded adhoc app prompted over the course of a couple of days. No human has written or reviewed a single line of code. No human has probably even read this README.
 
-Loudline is a free and open-source Windows app for basic loudness control of an entire music release. It exists mainly for convenient user interface for this purpose. The audio processing itself contains nothing miraculous or innovate.
+Loudline is a free and open-source Windows app for basic loudness matching of an entire music release. It exists mainly for convenient user interface for this purpose. The audio processing itself contains nothing miraculous or innovate.
 
 It is a portable (no installation), single .exe file, and you can download it from here:
 
