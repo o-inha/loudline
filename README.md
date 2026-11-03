@@ -42,8 +42,8 @@ https://github.com/user-attachments/assets/8b182e51-16ab-4af9-953f-27f6be031f9c
   - Its designated purpose: you can have vastly loudness-processed songs, while the background noise stays at static volume across the release.
 - Slice or merge audio files.
   - Each audio slice is treated as their own "audio file", and everything is analyzed and processed accordingly.
-  - Want target LUFS to change in the middle of a track: Just slice it.
-  - Want two tracks processed together to single LUFS target: just merge it.
+  - Want different parts of a song to be separately analyzed and processed to target LUFS: just slice it.
+  - Want two tracks processed together to target LUFS: just merge it.
 - Insert silence.
   - at start, at end, between specific audio files, between all audio files. 
 - Seamless single segment (A or B) or dual segment (A & B) looping.
