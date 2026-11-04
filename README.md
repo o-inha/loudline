@@ -53,6 +53,11 @@ _These clips are partly sped up. It will probably not process your audio this fa
 - Custom track (song) boundaries.
   - As if we concatenate all songs into one long audio file, and then re-slice it by these custom bounadry markers when we export.
   - All processing still happens according to actual audio file boundaries.
+- Layout options.
+  - Dark or light theme.
+  - Button style (icon-only or with text).
+  - Auto-adjust toolbars layout to screen size.
+- Keyboard shortcuts.
 - My personal favourite: dropdown for selecting output device right there on the main UI, without need to dive into app settings.
   
 ---
